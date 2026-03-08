@@ -1,0 +1,201 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", "Tahoma", sans-serif;
+    overflow-x: hidden;
+}
+
+.main-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.topbar {
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(135, 185, 225, 0.4) 50%, 
+        rgba(40, 90, 140, 0.6) 51%, 
+        rgba(30, 70, 110, 0.8) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.logo span {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 1px 1px 2px black;
+}
+
+.navigation {
+    display: flex;
+    gap: 5px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 18px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.main-content {
+    padding-bottom: 150px;
+}
+
+.aero-window {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    border-radius: 8px 8px 4px 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.aero-header {
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.5) 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(0, 0, 0, 0.05) 51%, 
+        rgba(0, 0, 0, 0.15) 100%);
+    padding: 10px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.aero-header h2 {
+    margin: 0;
+    font-size: 15px;
+    color: #1c3f70;
+    font-weight: 600;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+.inner-content {
+    padding: 25px;
+    font-size: 14px;
+    color: #111;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #707070;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+}
+
+.aero-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 50%, #dddddd 51%, #cfcfcf 100%);
+    border: 1px solid #707070;
+    border-radius: 3px;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 12px;
+    box-shadow: inset 0 1px 0 white;
+    cursor: pointer;
+}
+
+.aero-button:hover {
+    border-color: #3c7fb1;
+    background: linear-gradient(to bottom, #eaf6fd 0%, #d9effc 50%, #bee6fd 51%, #a7d9f5 100%);
+}
+
+.aero-sidebar {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding: 20px;
+}
+
+.aero-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #707070;
+}
+
+.aero-table th {
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.7) 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(0, 0, 0, 0.05) 51%, 
+        rgba(0, 0, 0, 0.1) 100%);
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+    color: #1c3f70;
+    border-bottom: 1px solid #707070;
+    text-shadow: 1px 1px 0px white;
+}
+
+.aero-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 13px;
+}
+
+.aero-table tr:hover td {
+    background: rgba(180, 220, 255, 0.3);
+}
